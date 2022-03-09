@@ -13,7 +13,7 @@ public class Ex2 {
         }
         for (char y : b.toCharArray()) {
             if (!map.containsKey(y) || map.get(y) == 0) return "NO";
-            map.put(y, map.get(y) -1);
+            map.put(y, map.get(y) - 1);
         }
         return answer;
     }
