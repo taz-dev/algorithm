@@ -1,3 +1,5 @@
+package lv1_string;
+
 import java.util.Scanner;
 
 public class Ex3 {
