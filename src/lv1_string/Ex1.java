@@ -1,3 +1,5 @@
+package lv1_string;
+
 import java.util.Locale;
 import java.util.Scanner;
 
