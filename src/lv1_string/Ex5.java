@@ -19,10 +19,9 @@ public class Ex5 {
                 rt--;
             }
         }
-        answer = String.valueOf(arr);
+        answer = String.valueOf(arr); //char배열을 String으로 변환
         return answer;
     }
-
 
     public static void main(String[] args) {
         Ex5 T = new Ex5();
