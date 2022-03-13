@@ -1,13 +1,16 @@
 package lv1_string;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ex8 {
     public String solution(String str){
-        String answer="NO";
-        str = str.toUpperCase().replaceAll("[^A-Z]", "");
-        String tmp = new StringBuilder(str).reverse().toString();
-        if(str.equals(tmp)) answer = "YES";
+        String answer = "NO";
+
+        str = str.toUpperCase(Locale.ROOT).replaceAll("[^A-Z]", "");
+        String rev = new StringBuilder(str).reverse().toString();
+        if (str.equals(rev)) answer = "YES";
+
         return answer;
     }
 
