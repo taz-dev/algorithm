@@ -5,14 +5,15 @@ import java.util.Collections;
 import java.util.Scanner;
 
 class Body implements Comparable<Body> {
-    public int h, w; //h : 키, w : 몸무게
-    Body(int h, int w) {
+    public int h, w;
+
+    public Body(int h, int w) {
         this.h = h;
         this.w = w;
     }
     @Override
     public int compareTo(Body o) {
-        return o.h - this.h; //키로 내림차순
+        return o.w - this.w; //몸무게로 내림차순
     }
 }
 
@@ -21,9 +22,10 @@ public class Ex1 {
         int answer = 0;
         Collections.sort(arr);
         int max = Integer.MIN_VALUE;
-        for (Body ob : arr) {
-            if (ob.w > max) {
-                max = ob.w;
+
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i).h > max) {
+                max = arr.get(i).h;
                 answer++;
             }
         }
