@@ -7,17 +7,18 @@ public class Ex1 {
     static int n, total = 0;
     boolean flag = false;
 
-    public void DFS(int L, int sum, int[] arr) {
+    public void DFS(int level, int sum, int[] arr) {
         if (flag) return;
         if (sum > total/2) return;
-        if (L == n) {
+
+        if (level == n) {
             if ((total-sum) == sum) {
                 answer = "YES";
                 flag = true;
             }
         } else {
-            DFS(L+1, sum+arr[L], arr);
-            DFS(L+1, sum, arr);
+            DFS(level+1, sum+arr[level], arr);
+            DFS(level+1, sum, arr);
         }
     }
 
