@@ -18,13 +18,14 @@ class Person{
 public class Ex8 {
     public int solution(int n, int m, int[] arr) {
         int answer = 0;
-        Queue<Person> queue = new LinkedList<>();
 
+        Queue<Person> queue = new LinkedList<>();
         for (int i = 0; i < n; i++) {
             queue.offer(new Person(i, arr[i]));
         }
         while (!queue.isEmpty()) {
             Person tmp = queue.poll();
+
             for (Person x : queue) {
                 if (x.priority > tmp.priority) {
                     queue.offer(tmp);
@@ -39,6 +40,7 @@ public class Ex8 {
         }
         return answer;
     }
+
     public static void main(String[] args) throws IOException {
         Ex8 T = new Ex8();
         Scanner kb = new Scanner(System.in);
