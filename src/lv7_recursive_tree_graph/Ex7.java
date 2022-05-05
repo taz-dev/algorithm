@@ -3,17 +3,9 @@ package lv7_recursive_tree_graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node {
-    int data;
-    Node lt, rt;
-    public Node(int val) {
-        data = val;
-        lt = rt = null;
-    }
-}
-
 public class Ex7 {
     Node root;
+
     public void BFS(Node root) {
         Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
