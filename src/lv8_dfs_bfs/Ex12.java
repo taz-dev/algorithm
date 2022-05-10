@@ -43,7 +43,7 @@ public class Ex12 {
         }
         T.BFS();
         boolean flag = true;
-        int answer = Integer.MAX_VALUE;
+        int answer = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (tomato[i][j] == 0) flag = false;
