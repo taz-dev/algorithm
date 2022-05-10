@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Ex12 {
     static int[] dx = {-1, 0, 1, 0};
     static int[] dy = {0, 1, 0, -1};
-    static int[][] tomato, dis;
+    static int[][] tomato, date;
     static int m, n;
     static Queue<Point> queue = new LinkedList<>();
 
@@ -22,7 +22,7 @@ public class Ex12 {
                 if (nx >= 0 && nx < n && ny >= 0 && ny < m && tomato[nx][ny] == 0) {
                     tomato[nx][ny] = 1;
                     queue.offer(new Point(nx, ny));
-                    dis[nx][ny] = dis[tmp.x][tmp.y] + 1;
+                    date[nx][ny] = date[tmp.x][tmp.y] + 1;
                 }
             }
         }
@@ -34,7 +34,7 @@ public class Ex12 {
         m = kb.nextInt();
         n = kb.nextInt();
         tomato = new int[n][m];
-        dis = new int[n][m];
+        date = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 tomato[i][j] = kb.nextInt();
@@ -52,7 +52,7 @@ public class Ex12 {
         if (flag) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < m; j++) {
-                    answer = Math.max(answer, dis[i][j]);
+                    answer = Math.max(answer, date[i][j]);
                 }
             }
             System.out.println(answer);
