@@ -31,8 +31,8 @@ public class Ex11 {
 
                 if (nx >= 1 && nx <= 7 && ny >= 1 && ny <= 7 && board[nx][ny] == 0) {
                     //경계선 안쪽에 있고 통로(0)인지 판단
-                    board[nx][ny] = 1; //1로 바꿔서 벽으로 만듬
                     queue.offer(new Point(nx, ny));
+                    board[nx][ny] = 1; //1로 바꿔서 벽으로 만듬
                     dis[nx][ny] = dis[tmp.x][tmp.y] + 1;
                 }
             }
